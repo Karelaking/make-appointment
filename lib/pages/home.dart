@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/common/functions.dart';
 import 'package:myapp/constants/icons.dart';
+import 'package:myapp/pages/account.dart';
+import 'package:myapp/pages/add.dart';
 import 'package:myapp/pages/settings.dart';
 import 'package:myapp/widgets/appointment_list_tile.dart';
 import 'package:myapp/widgets/text.dart';
@@ -22,7 +24,7 @@ class _HomeState extends State<Home> {
         leading: IconButton(
           icon: const Icon(Icons.person_rounded),
           onPressed: () {
-            popPage(context);
+            pushPageTo(context, const Account());
           },
         ),
         title: const Headding(
@@ -56,7 +58,9 @@ class _HomeState extends State<Home> {
       ),
       floatingActionButton: FloatingActionButton(
         child: AppIconConstant().add(context),
-        onPressed: () {},
+        onPressed: () {
+          pushPageTo(context, const Add());
+        },
       ),
     );
   }

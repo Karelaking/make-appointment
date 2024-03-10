@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:myapp/common/functions.dart';
@@ -5,7 +6,6 @@ import 'package:myapp/constants/icons.dart';
 import 'package:myapp/constants/size.dart';
 import 'package:myapp/widgets/appointment.dart';
 import 'package:myapp/widgets/text.dart';
-
 
 class FullViewAppointment extends StatefulWidget {
   const FullViewAppointment(
@@ -28,7 +28,6 @@ class _FullViewAppointmentState extends State<FullViewAppointment>
     placeholder: (context, url) => const CircularProgressIndicator(),
     errorWidget: (context, url, error) => const Icon(Icons.error),
   );
-
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +61,9 @@ class _FullViewAppointmentState extends State<FullViewAppointment>
                     fontWeight: AppSize.fw3),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 15,),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 15,
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +76,7 @@ class _FullViewAppointmentState extends State<FullViewAppointment>
                           fontWeight: AppSize.fw7),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal:5),
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
                       child: Card(
                         child: Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8),
@@ -85,7 +85,8 @@ class _FullViewAppointmentState extends State<FullViewAppointment>
                               AppointmentTile(
                                 icons: AppIconConstant().location(context),
                                 title: 'Meeting Location',
-                                subTitle: '231/A Girija Namgar P.A.C Line Kanpur , Uttar Pradesh',
+                                subTitle:
+                                    '231/A Girija Namgar P.A.C Line Kanpur , Uttar Pradesh',
                               ),
                               const Divider(),
                               AppointmentTile(
@@ -107,34 +108,42 @@ class _FullViewAppointmentState extends State<FullViewAppointment>
                               ),
                               const Divider(),
                               AppointmentTile(
-                                icons: AppIconConstant().email(context),
-                                title: 'Email',
-                                subTitle: 'karelaking277@gmail.com',
-                              ),
+                                  icons: AppIconConstant().email(context),
+                                  title: 'Email',
+                                  subTitle: 'karelaking277@gmail.com',
+                                 ),
                             ],
                           ),
                         ),
                       ),
                     ),
-                                        const Padding(
+                    const Padding(
                       padding: EdgeInsets.all(15.0),
                       child: Headding(
                           text: 'Metting Documents',
                           fontSize: 20,
                           fontWeight: AppSize.fw7),
                     ),
-                  const Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Chip(label: Text('Files'),),
-                        Chip(label: Text('Photos'),),
-                        Chip(label: Text('Links'),),
-                        Chip(label: Text('Videos'),),
-                      ],
-                    ),
-                  )
+                    const Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Chip(
+                            label: Text('Files'),
+                          ),
+                          Chip(
+                            label: Text('Photos'),
+                          ),
+                          Chip(
+                            label: Text('Links'),
+                          ),
+                          Chip(
+                            label: Text('Videos'),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               )

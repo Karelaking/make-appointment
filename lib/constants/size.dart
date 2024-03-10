@@ -60,4 +60,17 @@ class AppSize{
   static const fw7 =  FontWeight.w700;
   static const fw8 =  FontWeight.w800;
   static const fw9 =  FontWeight.w900;
+
+  // Font Size Constants
+  static const f1 = 1;
+  static const f2 = 2;
+  static const f3 = 3;
+  static const f4 = 4;
+  static const f5 = 5;
+  static const f6 = 6;
+  static const f7 = 7;
+  static const f8 = 8;
+  static const f9 = 9;
+  static const f10 = 10;
+  static const f11 = 11;
 }

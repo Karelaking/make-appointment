@@ -41,4 +41,12 @@ class AppIconConstant{
   Icon reason(context) => Icon(Icons.info_rounded,color: Theme.of(context).primaryIconTheme.color,size:26);
   // Add
   Icon add(context) => Icon(Icons.add,color: Theme.of(context).primaryIconTheme.color,size:26);
+  // Share
+  Icon share(context) => Icon(Icons.share_rounded,color: Theme.of(context).primaryIconTheme.color,size:26);
+  // Menu
+  Icon menu(context) => Icon(Icons.more_vert_rounded,color: Theme.of(context).primaryIconTheme.color,size:26);
+  // Person
+  Icon person(context) => Icon(Icons.person,color: Theme.of(context).primaryIconTheme.color,size:26);
+  // Star
+  Icon star(context) => Icon(Icons.star_rounded,color: Theme.of(context).primaryIconTheme.color,size:26);
 }

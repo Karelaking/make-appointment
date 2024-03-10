@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/common/functions.dart';
 import 'package:myapp/constants/icons.dart';
 import 'package:myapp/constants/size.dart';
+import 'package:myapp/pages/feedback.dart';
 import 'package:myapp/widgets/settings_list_tile.dart';
 import 'package:myapp/widgets/text.dart';
 
@@ -60,6 +61,7 @@ class Settings extends StatelessWidget {
                     SettingsListTile(
                       icons: AppIconConstant().feedBack(context),
                       title: 'Feedback',
+                    onPressed: () => pushPageTo(context, UserFeedBack()),
                     ),
                     const Divider(),
                     SettingsListTile(

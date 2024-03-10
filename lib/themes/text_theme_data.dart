@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppTextThemeConstants {
   // Light Text Theme Data
-  TextTheme textLightThemeData = TextTheme(
+  TextTheme textLightThemeData = const TextTheme(
       titleLarge: TextStyle(color: Colors.black),
       titleMedium: TextStyle(color: Colors.black),
       titleSmall: TextStyle(color: Colors.black),
@@ -18,7 +18,7 @@ class AppTextThemeConstants {
       );
 
   // Dark Text Theme Data
-  TextTheme textDarkThemeData = TextTheme(
+  TextTheme textDarkThemeData = const TextTheme(
       titleLarge: TextStyle(color: Colors.white),
       titleMedium: TextStyle(color: Colors.white),
       titleSmall: TextStyle(color: Colors.white),
