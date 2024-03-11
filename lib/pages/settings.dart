@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/common/functions.dart';
 import 'package:myapp/constants/icons.dart';
@@ -5,7 +6,6 @@ import 'package:myapp/constants/size.dart';
 import 'package:myapp/pages/feedback.dart';
 import 'package:myapp/widgets/settings_list_tile.dart';
 import 'package:myapp/widgets/text.dart';
-
 
 class Settings extends StatelessWidget {
   const Settings({super.key});
@@ -20,8 +20,8 @@ class Settings extends StatelessWidget {
             popPage(context);
           },
         ),
-        title:
-            const Headding(text: 'Settings', fontSize: 24, fontWeight: AppSize.fw7),
+        title: const Headding(
+            text: 'Settings', fontSize: 24, fontWeight: AppSize.fw7),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -32,8 +32,7 @@ class Settings extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                 child: Headding(
                   text: 'General',
                   fontSize: 24,
@@ -61,19 +60,24 @@ class Settings extends StatelessWidget {
                     SettingsListTile(
                       icons: AppIconConstant().feedBack(context),
                       title: 'Feedback',
-                    onPressed: () => pushPageTo(context, UserFeedBack()),
+                      onPressed: () => pushPageTo(context, UserFeedBack()),
                     ),
                     const Divider(),
                     SettingsListTile(
                       icons: AppIconConstant().about(context),
                       title: 'About',
+                      onPressed: () {
+                        showAboutDialog(
+                            context: context,
+                            applicationName: 'Make Appointment',
+                            applicationVersion: 'V_0.00.01');
+                      },
                     ),
                   ],
                 ),
               ),
               const Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                 child: Headding(
                   text: 'Accounts',
                   fontSize: 24,
@@ -101,38 +105,47 @@ class Settings extends StatelessWidget {
                     SettingsListTile(
                       icons: AppIconConstant().deleteAccount(context),
                       title: 'Delete Account',
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return const CupertinoDialogAction(
+                                child: Text('hello'),
+                              );
+                            });
+                      },
                     ),
                   ],
                 ),
               ),
               const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-              child: Headding(
-                text: 'Lagel',
-                fontSize: 24,
-                fontWeight: AppSize.fw7,
+                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                child: Headding(
+                  text: 'Lagel',
+                  fontSize: 24,
+                  fontWeight: AppSize.fw7,
+                ),
               ),
-            ),
-             Card(
-               child: Column(
-                 children: [
-                   SettingsListTile(
-                          icons: AppIconConstant().termsAndConditiion(context),
-                          title: 'Terms and Condition',
-                        ),
-                        const Divider(),
-                        SettingsListTile(
-                          icons: AppIconConstant().dataPrivacy(context),
-                          title: 'Data privacy',
-                        ),
-                        const Divider(),
-                        SettingsListTile(
-                          icons: AppIconConstant().qAndA(context),
-                          title: 'Q&A',
-                        ),
-                 ],
-               ),
-             ),
+              Card(
+                child: Column(
+                  children: [
+                    SettingsListTile(
+                      icons: AppIconConstant().termsAndConditiion(context),
+                      title: 'Terms and Condition',
+                    ),
+                    const Divider(),
+                    SettingsListTile(
+                      icons: AppIconConstant().dataPrivacy(context),
+                      title: 'Data privacy',
+                    ),
+                    const Divider(),
+                    SettingsListTile(
+                      icons: AppIconConstant().qAndA(context),
+                      title: 'Q&A',
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

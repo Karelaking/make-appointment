@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         centerTitle: true,
         leading: IconButton(
-          icon: const Icon(Icons.person_rounded),
+          icon: AppIconConstant().person(context),
           onPressed: () {
             pushPageTo(context, const Account());
           },
@@ -33,11 +33,11 @@ class _HomeState extends State<Home> {
             fontWeight: FontWeight.w700),
         actions: [
           IconButton(
-            icon: const Icon(Icons.notifications_on_rounded),
+            icon: AppIconConstant().notification(context),
             onPressed: () {},
           ),
           IconButton(
-            icon: const Icon(Icons.settings_rounded),
+            icon: AppIconConstant().settings(context),
             onPressed: () {
               pushPageTo(context, const Settings());
             },
@@ -48,6 +48,21 @@ class _HomeState extends State<Home> {
         padding: EdgeInsets.all(10.0),
         child: Column(
           children: [
+            AppointmentTile(
+              title: 'The Master',
+              subTitle:
+                  'Subtitle, this the subtitle only for the testing purpos, i want to make it long so that ia can test it. i think it is porfect for the testing',
+            ),
+            AppointmentTile(
+              title: 'The Master',
+              subTitle:
+                  'Subtitle, this the subtitle only for the testing purpos, i want to make it long so that ia can test it. i think it is porfect for the testing',
+            ),
+            AppointmentTile(
+              title: 'The Master',
+              subTitle:
+                  'Subtitle, this the subtitle only for the testing purpos, i want to make it long so that ia can test it. i think it is porfect for the testing',
+            ),
             AppointmentTile(
               title: 'The Master',
               subTitle:

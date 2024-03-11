@@ -61,13 +61,14 @@ class UserFeedBack extends StatelessWidget {
                   child: TextField(
                     controller: _feedbackController,
                     decoration: InputDecoration(
+                    
                         border: const OutlineInputBorder(
-                            borderSide: BorderSide.none,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(15))),
                         filled: true,
-                        fillColor: Theme.of(context).cardColor),
-                    maxLines: 15,
+                        fillColor: Theme.of(context).canvasColor),
+                    
+                    maxLines:5,
                   ),
                 ),
                 ElevatedButton(onPressed: () {}, child: const Text('Submmit'))

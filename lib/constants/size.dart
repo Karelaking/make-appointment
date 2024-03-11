@@ -62,15 +62,34 @@ class AppSize{
   static const fw9 =  FontWeight.w900;
 
   // Font Size Constants
-  static const f1 = 1;
-  static const f2 = 2;
-  static const f3 = 3;
-  static const f4 = 4;
-  static const f5 = 5;
-  static const f6 = 6;
-  static const f7 = 7;
-  static const f8 = 8;
-  static const f9 = 9;
-  static const f10 = 10;
-  static const f11 = 11;
+  static const double f1 = 1;
+  static const double f2 = 2;
+  static const double f3 = 3;
+  static const double f4 = 4;
+  static const double f5 = 5;
+  static const double f6 = 6;
+  static const double f7 = 7;
+  static const double f8 = 8;
+  static const double f9 = 9;
+  static const double f10 = 10;
+  static const double f11 = 11;
+  static const double f12 = 12;
+  static const double f13 = 13;
+  static const double f14 = 14;
+  static const double f15 = 15;
+  static const double f16 = 16;
+  static const double f17 = 17;
+  static const double f18 = 18;
+  static const double f19 = 19;
+  static const double f20 = 20;
+  static const double f21 = 21;
+  static const double f22 = 22;
+  static const double f23 = 23;
+  static const double f24 = 24;
+  static const double f25 = 25;
+  static const double f26 = 26;
+  static const double f27 = 27;
+  static const double f28 = 28;
+  static const double f29 = 29;
+  static const double f30 = 30;
 }
